@@ -1,0 +1,121 @@
+ Step 1: Check Python Version
+First, verify which version of Python you are using. Open Command Prompt and type:
+
+bash	Copy	Edit
+python --version
+Example output:
+
+nginx	Copy	Edit
+Python 3.10.6
+Note down the version.
+
+📌 Step 2: Download matplotlib and Dependencies (On Another PC with Internet)
+On an internet-connected PC, open Command Prompt and run:
+
+bash
+Copy
+Edit
+pip download matplotlib numpy
+This will download several .whl files into the current folder.
+
+Copy all the downloaded .whl files onto a USB drive.
+
+📌 Step 3: Install on Your Offline PC
+Transfer the .whl files from the USB drive to your offline PC (e.g., F:\Tkinter\dependencies).
+
+Open Command Prompt, navigate to the folder where .whl files are saved:
+
+bash
+Copy
+Edit
+cd F:\Tkinter\dependencies
+Install the packages manually:
+
+bash
+Copy
+Edit
+pip install numpy-<version>.whl
+pip install matplotlib-<version>.whl
+(Replace <version> with the actual filename of the .whl files.)
+
+📌 Step 4: Verify Installation
+After installation, check if matplotlib is installed correctly:
+
+bash
+Copy
+Edit
+python -c "import matplotlib; print(matplotlib.__version__)"
+If this prints a version number, matplotlib is installed successfully. 🎉
+
+📌 Step 5: Run Your Script
+Now, open PyCharm, load your Tkinter graph plotting script, and run it.
+
+This should work without errors! 🚀 Let me know if you need any help.
+
+
+
+
+
+
+You said:
+now i am doing in online pc later i will do it in offline
+
+ChatGPT said:
+Great! Since you're now on an online PC, you can easily install the required dependencies using:
+
+bash
+Copy
+Edit
+pip install matplotlib numpy
+Then, run your Tkinter script in PyCharm to test if it works. Once everything is working online, you can follow the offline installation steps I provided earlier to set it up on your offline PC.
+
+Let me know if you need any modifications or improvements in your script! 🚀
+
+
+
+
+
+
+You said:
+F:\Tkinter\.venv\Scripts\python.exe F:\Tkinter\plot.py 
+Traceback (most recent call last):
+  File "F:\Tkinter\plot.py", line 3, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+
+Process finished with exit code 1
+
+ChatGPT said:
+Since you're using a virtual environment (.venv) in PyCharm, you need to install matplotlib inside that environment. Follow these steps:
+
+📌 Step 1: Activate the Virtual Environment in PyCharm
+Open PyCharm and go to Terminal (bottom panel).
+
+Run the following command to activate the environment:
+
+bash
+Copy
+Edit
+F:\Tkinter\.venv\Scripts\activate
+Now, install matplotlib and numpy:
+
+bash
+Copy
+Edit
+pip install matplotlib numpy
+📌 Step 2: Verify the Installation
+After installation, check if matplotlib is installed correctly:
+
+bash
+Copy
+Edit
+python -c "import matplotlib; print(matplotlib.__version__)"
+If it prints a version number, it's installed successfully.
+
+📌 Step 3: Run Your Script
+Now, try running your Tkinter script in PyCharm:
+
+bash
+Copy
+Edit
+F:\Tkinter\.venv\Scripts\python.exe F:\Tki
